@@ -5,8 +5,8 @@ import java.io.IOException;
 
 public class Main {
     private static final int ROWSPERTHREAD = 500000;
-    private static final File inputDir = new File("C:/Users/julia/Desktop/SistDistribuidos/RGBtoBW/RGB_Images");
-    private static final File outputDir = new File("C:/Users/julia/Desktop/SistDistribuidos/RGBtoBW/BW_Images");
+    private static final File inputDir = new File("C:/path");
+    private static final File outputDir = new File("C:/path");
 
     static class ImageWorker extends Thread {
         private int initHeight;
