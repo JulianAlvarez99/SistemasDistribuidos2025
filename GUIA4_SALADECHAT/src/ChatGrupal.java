@@ -63,7 +63,6 @@ public class ChatGrupal extends JFrame {
         }
     }
 
-
     private void sendMulticastMessage(String message) {
         try {
             String userMessage = localAddress + ": " + message;
@@ -71,21 +70,6 @@ public class ChatGrupal extends JFrame {
             multicastSocket.send(packet);
         } catch (IOException e) {
             chatArea.append("Error sending message: " + e.getMessage() + "\n");
-        }
-    }
-
-    private void stopMulticast() {
-        try {
-            if (listenerThread != null && listenerThread.isAlive()) {
-                listenerThread.interrupt();
-            }
-            if (multicastSocket != null) {
-                multicastSocket.leaveGroup(group);
-                multicastSocket.close();
-                chatArea.append("Disconnected from chat room.\n");
-            }
-        } catch (IOException e) {
-            chatArea.append("Error disconnecting: " + e.getMessage() + "\n");
         }
     }
 
@@ -114,14 +98,6 @@ public class ChatGrupal extends JFrame {
                     sendMulticastMessage(msg);
                     envioField.setText("");
                 }
-            }
-        });
-
-        setVisible(true);
-        descBtn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                stopMulticast();
             }
         });
     }
