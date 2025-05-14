@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 // Cliente que interactúa con el servicio remoto de transferencia de archivos
 public class FileClient {
-    private static final String CLIENT_DIR = "C:/Users/julia/Desktop/SistDistribuidos/FileClientStorage";
+    private static final String CLIENT_DIR = "C:/Users/julia/Desktop/JulianFacu/SistemasDistribuidosl/FileClientStorage";
     private static final int RMI_PORT = 1099;
     private static final String SERVICE_NAME = "FileService";
     private final FileService service;

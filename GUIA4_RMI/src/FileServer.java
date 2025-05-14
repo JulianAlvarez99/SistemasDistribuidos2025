@@ -3,7 +3,7 @@ import java.rmi.registry.Registry;
 
 // Servidor RMI que registra el servicio de transferencia de archivos
 public class FileServer {
-    private static final String BASE_DIR = "C:/Users/julia/Desktop/SistDistribuidos/FileServerStorage";
+    private static final String BASE_DIR = "C:/Users/julia/Desktop/JulianFacu/SistemasDistribuidosl/FileServerStorage";
     private static final int RMI_PORT = 1099; // Puerto por defecto de RMI
     private static final String SERVICE_NAME = "FileService";
 

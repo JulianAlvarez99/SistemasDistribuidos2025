@@ -5,7 +5,7 @@ import java.util.Scanner;
 import java.util.logging.*;
 
 public class Receptor {
-    private static final File outputDir = new File("C:/Users/julia/Desktop/SistDistribuidos/outText");
+    private static final File outputDir = new File("C:/Users/julia/Desktop/JulianFacu/SistemasDistribuidosl/outText");
     private static final String SENTINEL = "__SENTINEL__";
     private static final String MULTICAST_ADDRESS = "230.0.0.1";
     private static final int MULTICAST_PORT = 4446;

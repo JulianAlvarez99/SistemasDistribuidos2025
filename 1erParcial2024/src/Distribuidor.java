@@ -32,7 +32,7 @@ public class Distribuidor extends JFrame {
     private static int prodThreads;
     private static int prodTimePerChar; // ms por carácter para productores
     private static int consTimePerChar; // ms por carácter para consumidores
-    private static final File inputDir = new File("C:/Users/julia/Desktop/SistDistribuidos/inText");
+    private static final File inputDir = new File("C:/Users/julia/Desktop/JulianFacu/SistemasDistribuidosl/inText");
     private static final String SENTINEL = "__SENTINEL__";
     private static final Logger logger = Logger.getLogger(Distribuidor.class.getName());
     private static JTextArea logAreaStatic; // Referencia estática para el logArea
@@ -69,9 +69,9 @@ public class Distribuidor extends JFrame {
                 consTimePerChar = Integer.parseInt(consTimeField.getText());
 
                 buffer = new ArrayBlockingQueue<>(bufferSize);
-                log("Configuración: Productores=" + prodThreads + ", Consumidores=" + consThreads +
-                        ", Tamaño Buffer=" + bufferSize + ", Tiempo Prod/char=" + prodTimePerChar +
-                        "ms, Tiempo Cons/char=" + consTimePerChar + "ms");
+                log("Configuración:\n Productores=" + prodThreads + "\n Consumidores=" + consThreads +
+                        "\n Tamaño Buffer=" + bufferSize + "\n Tiempo Prod/char=" + prodTimePerChar +
+                        "ms\n Tiempo Cons/char=" + consTimePerChar + "ms\n");
 
                 distributionProcess();
             } catch (NumberFormatException ex) {
