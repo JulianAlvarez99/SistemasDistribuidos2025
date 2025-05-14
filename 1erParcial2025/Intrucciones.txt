@@ -1,0 +1,19 @@
+Secuencia de inicio:
+-Iniciar broker y conectarlo
+-Iniciar suscriptores a los puertos iniciales
+-Iniciar publicadores a los puertos de publicacion
+
+El ip de broker es localhost ===> Escribir esto en el campo a completar
+Puertos a los que el publicador publica en el broker
+=> Noticia 5000
+=> Alerta 5001  
+=> Actualizacion 5002
+=> Registro 5003
+
+Puertos inciales a los que los suscriptores deben entrar como primera instancia segun su tema
+=> Noticia 6000
+=> Alerta 6001
+=> Actualizacion 6002
+=> Registro 6003
+
+Luego se pueden instanciar mas suscriptores con otros puertos a distintos temas
