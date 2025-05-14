@@ -47,7 +47,7 @@
               <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Produce time:"/>
+              <text value="Produce time (ms/char):"/>
             </properties>
           </component>
           <component id="224a" class="javax.swing.JLabel" binding="consTimeLabel">
@@ -55,7 +55,7 @@
               <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Consume time:"/>
+              <text value="Consume time (ms/char):"/>
             </properties>
           </component>
           <component id="f6506" class="javax.swing.JTextField" binding="prodThreadsField">
