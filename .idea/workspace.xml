@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac98f3a4-21fc-4739-b2c5-30974cf03ada" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/SistemasDistribuidos2025.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Berkeley/Berkeley.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NTPClient/NTPClient.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NTPServer/NTPServer.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RelojVirtual/RelojVirtual.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/SistemasDistribuidosl.iml" beforeDir="false" />
+    <list default="true" id="ac98f3a4-21fc-4739-b2c5-30974cf03ada" name="Changes" comment="Guia 5 primera parte funcionando">
+      <change afterPath="$PROJECT_DIR$/Mutex_centralizado/Mutex_centralizado.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mutex_token/Mutex_token.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/1erParcial2025/Suscriptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/1erParcial2025/Suscriptor.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,8 +51,11 @@
   "keyToString": {
     "Application.Broker.executor": "Run",
     "Application.ClienteVirtual.executor": "Run",
+    "Application.Coordinador.executor": "Run",
     "Application.NTPClient.executor": "Run",
     "Application.NTPServer.executor": "Run",
+    "Application.ProcesoCliente.executor": "Run",
+    "Application.ProcesoToken.executor": "Run",
     "Application.Publicador.executor": "Run",
     "Application.RelojCliente.executor": "Run",
     "Application.RelojCoordinador.executor": "Run",
@@ -82,7 +80,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.RelojCliente">
+  <component name="RunManager" selected="Application.ProcesoToken">
     <configuration name="Broker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Broker" />
       <module name="CorreccionParcial2025" />
@@ -93,6 +91,27 @@
     <configuration name="ClienteVirtual" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ClienteVirtual" />
       <module name="NTPServer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Coordinador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Coordinador" />
+      <module name="Mutex_centralizado" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProcesoCliente" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ProcesoCliente" />
+      <module name="Mutex_centralizado" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProcesoToken" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ProcesoToken" />
+      <module name="Mutex_token" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -127,6 +146,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Coordinador" />
         <item itemvalue="Application.RelojCoordinador" />
         <item itemvalue="Application.Publicador" />
         <item itemvalue="Application.Suscriptor" />
@@ -151,11 +171,24 @@
       <option name="presentableId" value="Default" />
       <updated>1747278475438</updated>
       <workItem from="1747278477119" duration="120000" />
-      <workItem from="1750103755070" duration="16315000" />
+      <workItem from="1750103755070" duration="23847000" />
     </task>
+    <task id="LOCAL-00001" summary="Guia 5 primera parte funcionando">
+      <option name="closed" value="true" />
+      <created>1750132427232</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1750132427232</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Guia 5 primera parte funcionando" />
+    <option name="LAST_COMMIT_MESSAGE" value="Guia 5 primera parte funcionando" />
   </component>
 </project>

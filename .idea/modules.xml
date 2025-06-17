@@ -11,6 +11,8 @@
       <module fileurl="file://$PROJECT_DIR$/GUIA4_ChatP2P/GUIA4_ChatP2P.iml" filepath="$PROJECT_DIR$/GUIA4_ChatP2P/GUIA4_ChatP2P.iml" />
       <module fileurl="file://$PROJECT_DIR$/GUIA4_RMI/GUIA4_RMI.iml" filepath="$PROJECT_DIR$/GUIA4_RMI/GUIA4_RMI.iml" />
       <module fileurl="file://$PROJECT_DIR$/GUIA4_SALADECHAT/GUIA4_SALADECHAT.iml" filepath="$PROJECT_DIR$/GUIA4_SALADECHAT/GUIA4_SALADECHAT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Mutex_centralizado/Mutex_centralizado.iml" filepath="$PROJECT_DIR$/Mutex_centralizado/Mutex_centralizado.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Mutex_token/Mutex_token.iml" filepath="$PROJECT_DIR$/Mutex_token/Mutex_token.iml" />
       <module fileurl="file://$PROJECT_DIR$/NTPClient/NTPClient.iml" filepath="$PROJECT_DIR$/NTPClient/NTPClient.iml" />
       <module fileurl="file://$PROJECT_DIR$/NTPServer/NTPServer.iml" filepath="$PROJECT_DIR$/NTPServer/NTPServer.iml" />
       <module fileurl="file://$PROJECT_DIR$/RGBtoBW/RGBtoBW.iml" filepath="$PROJECT_DIR$/RGBtoBW/RGBtoBW.iml" />
