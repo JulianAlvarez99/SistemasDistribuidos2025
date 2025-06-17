@@ -4,38 +4,85 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dae7a83e-bd58-41fa-8b74-f2474a6fc135" name="Changes" comment="" />
+    <list default="true" id="ac98f3a4-21fc-4739-b2c5-30974cf03ada" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/SistemasDistribuidos2025.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Berkeley/Berkeley.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NTPClient/NTPClient.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NTPServer/NTPServer.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RelojVirtual/RelojVirtual.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SistemasDistribuidosl.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;JulianAlvarez99&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/JulianAlvarez99/SistemasDistribuidos2025.git&quot;,
+    &quot;accountId&quot;: &quot;344aa737-118f-4466-81c5-a0cb283d52d8&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 1
 }</component>
-  <component name="ProjectId" id="2x73j4BUEU9oGkDhx4qYZRGEpyO" />
+  <component name="ProjectId" id="2x79v87OAlJBP0Hd9bZ0g33Zx2r" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Broker.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Publicador.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Suscriptor.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/julia/Desktop/SistDistribuidos/CorreccionParcial2025&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Broker.executor": "Run",
+    "Application.ClienteVirtual.executor": "Run",
+    "Application.NTPClient.executor": "Run",
+    "Application.NTPServer.executor": "Run",
+    "Application.Publicador.executor": "Run",
+    "Application.RelojCliente.executor": "Run",
+    "Application.RelojCoordinador.executor": "Run",
+    "Application.RelojVirtual.executor": "Run",
+    "Application.Suscriptor.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "242",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/julia/Downloads/commons-net-3.6.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.tabs",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Application.Suscriptor">
+}]]></component>
+  <component name="RunManager" selected="Application.RelojCliente">
     <configuration name="Broker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Broker" />
       <module name="CorreccionParcial2025" />
@@ -43,14 +90,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Publicador" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
+    <configuration name="ClienteVirtual" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ClienteVirtual" />
+      <module name="NTPServer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Publicador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Publicador" />
       <module name="CorreccionParcial2025" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Suscriptor" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+    <configuration name="RelojCliente" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RelojCliente" />
+      <module name="Berkeley" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RelojCoordinador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RelojCoordinador" />
+      <module name="Berkeley" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Suscriptor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Suscriptor" />
       <module name="CorreccionParcial2025" />
       <method v="2">
@@ -59,6 +127,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RelojCoordinador" />
+        <item itemvalue="Application.Publicador" />
         <item itemvalue="Application.Suscriptor" />
         <item itemvalue="Application.Broker" />
       </list>
@@ -75,13 +145,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="dae7a83e-bd58-41fa-8b74-f2474a6fc135" name="Changes" comment="" />
-      <created>1747275416495</created>
+      <changelist id="ac98f3a4-21fc-4739-b2c5-30974cf03ada" name="Changes" comment="" />
+      <created>1747278475438</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1747275416495</updated>
-      <workItem from="1747275417677" duration="2016000" />
-      <workItem from="1747277693773" duration="14000" />
+      <updated>1747278475438</updated>
+      <workItem from="1747278477119" duration="120000" />
+      <workItem from="1750103755070" duration="16315000" />
     </task>
     <servers />
   </component>
