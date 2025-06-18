@@ -4,10 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac98f3a4-21fc-4739-b2c5-30974cf03ada" name="Changes" comment="Guia 5 hasta punto 7">
-      <change afterPath="$PROJECT_DIR$/Bully_Election/Bully_Election.iml" afterDir="false" />
+    <list default="true" id="f6bd88da-e6d2-4a81-9905-c4e47e9180f7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/SistDistribuidos.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Consenso/Consenso.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Global_State/Global_State.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ring_Election/Ring_Election.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SistemasDistribuidos2025.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NTPClient/NTPClient.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NTPClient/NTPClient.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NTPServer/NTPServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NTPServer/NTPServer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RelojVirtual/RelojVirtual.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RelojVirtual/RelojVirtual.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,137 +34,79 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;JulianAlvarez99&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "JulianAlvarez99"
   }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/JulianAlvarez99/SistemasDistribuidos2025.git&quot;,
-    &quot;accountId&quot;: &quot;344aa737-118f-4466-81c5-a0cb283d52d8&quot;
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/JulianAlvarez99/SistemasDistribuidos2025.git",
+    "accountId": "f4f36b07-9512-4471-bece-bd8d82534183"
   }
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 1
-}</component>
-  <component name="ProjectId" id="2x79v87OAlJBP0Hd9bZ0g33Zx2r" />
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2yf52y3Ha85P9F3ONq6oXc9KcYD" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Broker.executor": "Run",
-    "Application.ClienteVirtual.executor": "Run",
     "Application.Coordinador (1).executor": "Run",
     "Application.Coordinador.executor": "Run",
-    "Application.NTPClient.executor": "Run",
-    "Application.NTPServer.executor": "Run",
-    "Application.Node.executor": "Run",
     "Application.ProcesoCliente (1).executor": "Run",
     "Application.ProcesoCliente.executor": "Run",
-    "Application.ProcesoToken.executor": "Run",
-    "Application.Publicador.executor": "Run",
-    "Application.RelojCliente.executor": "Run",
-    "Application.RelojCoordinador.executor": "Run",
-    "Application.RelojVirtual.executor": "Run",
-    "Application.Suscriptor.executor": "Run",
+    "Application.ProcesoClienteRing.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "242",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/julia/Downloads/commons-net-3.6.jar",
+    "last_opened_file_path": "C:/Users/julia/Desktop/JulianFacu/SistDistribuidos",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.tabs",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Node">
-    <configuration name="ClienteVirtual" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ClienteVirtual" />
-      <module name="NTPServer" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.ProcesoCliente (1)">
     <configuration name="Coordinador (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Coordinador" />
-      <module name="Bully_Election" />
+      <module name="Global_State" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Coordinador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Coordinador" />
-      <module name="Mutex_centralizado" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Node" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Node" />
-      <module name="Bully_Election" />
+      <module name="Consenso" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="ProcesoCliente (1)" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ProcesoCliente" />
-      <module name="Bully_Election" />
+      <module name="Global_State" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="ProcesoCliente" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ProcesoCliente" />
-      <module name="Mutex_centralizado" />
+      <module name="Consenso" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProcesoToken" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ProcesoToken" />
-      <module name="Mutex_token" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Publicador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Publicador" />
-      <module name="CorreccionParcial2025" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RelojCliente" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="RelojCliente" />
-      <module name="Berkeley" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RelojCoordinador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="RelojCoordinador" />
-      <module name="Berkeley" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Suscriptor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Suscriptor" />
-      <module name="CorreccionParcial2025" />
+    <configuration name="ProcesoClienteRing" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ProcesoClienteRing" />
+      <module name="Ring_Election" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -163,9 +115,6 @@
       <list>
         <item itemvalue="Application.Coordinador (1)" />
         <item itemvalue="Application.Coordinador" />
-        <item itemvalue="Application.RelojCoordinador" />
-        <item itemvalue="Application.Publicador" />
-        <item itemvalue="Application.Suscriptor" />
       </list>
     </recent_temporary>
   </component>
@@ -180,51 +129,16 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ac98f3a4-21fc-4739-b2c5-30974cf03ada" name="Changes" comment="" />
-      <created>1747278475438</created>
+      <changelist id="f6bd88da-e6d2-4a81-9905-c4e47e9180f7" name="Changes" comment="" />
+      <created>1750212585832</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1747278475438</updated>
-      <workItem from="1747278477119" duration="120000" />
-      <workItem from="1750103755070" duration="24015000" />
-      <workItem from="1750199460266" duration="5264000" />
+      <updated>1750212585832</updated>
+      <workItem from="1750212587451" duration="8891000" />
     </task>
-    <task id="LOCAL-00001" summary="Guia 5 primera parte funcionando">
-      <option name="closed" value="true" />
-      <created>1750132427232</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1750132427232</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Guia 5 hasta punto 7">
-      <option name="closed" value="true" />
-      <created>1750141537644</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1750141537644</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Guia 5 primera parte funcionando" />
-    <MESSAGE value="Guia 5 hasta punto 7" />
-    <option name="LAST_COMMIT_MESSAGE" value="Guia 5 hasta punto 7" />
   </component>
 </project>
