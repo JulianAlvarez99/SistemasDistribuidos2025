@@ -9,7 +9,7 @@ public class Coordinador {
     private PrintWriter log;
 
     public Coordinador(int puerto) throws IOException {
-        log = new PrintWriter(new FileWriter("coordinador.log", true));
+        log = new PrintWriter(new FileWriter("Coordinador.log", true));
         ServerSocket serverSocket = new ServerSocket(puerto);
         System.out.println("Coordinador en puerto " + puerto);
         while (true) {
