@@ -7,34 +7,35 @@ import java.util.*;
 import java.util.List;
 
 public class Directorio {
-    private List<NodoInfo> nodos = new ArrayList<>();
+    private final List<NodoInfo> nodos = new ArrayList<>();
+    private final Set<String> notificados = new HashSet<>();
     private JTextArea logArea;
     private JScrollPane scrollPanel;
     private JPanel mainPanel;
-    private Set<String> notificados = new HashSet<>();
+
 
     private static class NodoInfo {
-        String nombre;
-        String ip;
-        int puerto;
-
+        final String nombre;
+        final String ip;
+        final int puerto;
         NodoInfo(String nombre, String ip, int puerto) {
             this.nombre = nombre;
             this.ip = ip;
             this.puerto = puerto;
         }
-
-        @Override
-        public String toString() {
-            return nombre + " (" + ip + ":" + puerto + ")";
-        }
+        @Override public String toString() { return nombre + " (" + ip + ":" + puerto + ")"; }
     }
 
-    public Directorio(int puerto) throws IOException {
-        iniciarGUI();
+    public Directorio(int puertoDirectorio) throws IOException {
+        JFrame frame = new JFrame("Directorio");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 300);
+        logArea = new JTextArea(); logArea.setEditable(false);
+        frame.add(new JScrollPane(logArea));
+        frame.setVisible(true);
 
-        ServerSocket serverSocket = new ServerSocket(puerto);
-        logArea.append("Directorio en puerto " + puerto + "\n");
+        ServerSocket serverSocket = new ServerSocket(puertoDirectorio);
+        logArea.append("Directorio en puerto " + puertoDirectorio + "\n");
 
         new Thread(() -> {
             while (true) {
@@ -42,8 +43,7 @@ public class Directorio {
                     Socket socket = serverSocket.accept();
                     handleConnection(socket);
                 } catch (IOException e) {
-                    SwingUtilities.invokeLater(() ->
-                            logArea.append("Error Directorio: " + e.getMessage() + "\n"));
+                    SwingUtilities.invokeLater(() -> logArea.append("Error Directorio: " + e.getMessage() + "\n"));
                 }
             }
         }, "Director-Acceptor").start();
@@ -54,14 +54,19 @@ public class Directorio {
              PrintWriter out = new PrintWriter(socket.getOutputStream(), true)) {
 
             String[] partes = in.readLine().split(" ");
-            String comando = partes[0];
-
-            switch (comando) {
+            String cmd = partes[0];
+            switch (cmd) {
                 case "REGISTRAR":
-                    registrarNodo(partes[1], partes[2], Integer.parseInt(partes[3]), out);
+                    registrarNodo(partes[1], partes[2], Integer.parseInt(partes[3]));
+                    out.println("OK");
                     break;
                 case "READY":
-                    marcaYNotificaReady(partes[1], out);
+                    reconfigurarAnillo();
+                    out.println("OK");
+                    break;
+                case "DESREGISTRAR":
+                    desregistrarNodo(partes[1]);
+                    out.println("OK");
                     break;
                 case "RESOLVER":
                     resolver(partes[1], out);
@@ -69,138 +74,67 @@ public class Directorio {
                 case "RESOLVER_POR_PUERTO":
                     resolverPorPuerto(partes[1], out);
                     break;
-                case "DESREGISTRAR":
-                    desregistrarNodo(partes[1], out);
-                    break;
                 default:
                     out.println("COMANDO_DESCONOCIDO");
             }
         } catch (IOException e) {
-            SwingUtilities.invokeLater(() ->
-                    logArea.append("Error al procesar conexión: " + e.getMessage() + "\n"));
+            SwingUtilities.invokeLater(() -> logArea.append("Error al procesar conexión: " + e.getMessage() + "\n"));
         }
     }
 
-    private void registrarNodo(String nombre, String ip, int puerto, PrintWriter out) {
+    private synchronized void registrarNodo(String nombre, String ip, int puerto) {
         nodos.add(new NodoInfo(nombre, ip, puerto));
         SwingUtilities.invokeLater(this::actualizarGUI);
-        // No notificar aún: esperamos READY
-        out.println("OK");
     }
 
-    private void marcaYNotificaReady(String nombre, PrintWriter out) {
-        // Un nodo confirma estar listo: ya está en nodos, lanzamos notificación
-        SwingUtilities.invokeLater(this::actualizarGUI);
-        notificarNodos();
-        if (nodos.size() == 1) {
-            indicarGenerarToken(nodos.get(0));
-        }
-        out.println("OK");
-    }
-
-    private void desregistrarNodo(String nombre, PrintWriter out) {
+    private synchronized void desregistrarNodo(String nombre) {
         nodos.removeIf(n -> n.nombre.equals(nombre));
         SwingUtilities.invokeLater(this::actualizarGUI);
-        notificarNodos();
-        if (!nodos.isEmpty()) {
-            indicarGenerarToken(nodos.get(0));
+        reconfigurarAnillo();
+    }
+
+    private synchronized void reconfigurarAnillo() {
+        SwingUtilities.invokeLater(this::actualizarGUI);
+        notificados.clear();
+        for (int i = 0; i < nodos.size(); i++) {
+            NodoInfo actual = nodos.get(i);
+            NodoInfo siguiente = nodos.get((i + 1) % nodos.size());
+            notificarSiguiente(actual, siguiente.nombre);
         }
-        out.println("OK");
+    }
+
+    private void notificarSiguiente(NodoInfo nodo, String sigNombre) {
+        for (int i = 0; i < 5; i++) {
+            try (Socket s = new Socket(nodo.ip, nodo.puerto);
+                 PrintWriter out = new PrintWriter(s.getOutputStream(), true);
+                 BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream()))) {
+                out.println("SIGUIENTE " + sigNombre);
+                in.readLine();
+                return;
+            } catch (IOException e) {
+                logArea.append("Intento fallido SIGUIENTE a " + nodo.nombre + ": " + e.getMessage() + "\n");
+                try { Thread.sleep(500); } catch (InterruptedException ignored) {}
+            }
+        }
+        logArea.append("Error notificar SIGUIENTE a " + nodo.nombre + "\n");
     }
 
     private void resolver(String nombre, PrintWriter out) {
-        for (NodoInfo nodo : nodos) {
-            if (nodo.nombre.equals(nombre)) {
-                out.println(nodo.ip + ":" + nodo.puerto);
-                return;
-            }
-        }
+        for (NodoInfo n : nodos) if (n.nombre.equals(nombre)) { out.println(n.ip + ":" + n.puerto); return; }
         out.println("DESCONOCIDO");
     }
 
     private void resolverPorPuerto(String puertoStr, PrintWriter out) {
         try {
-            int puerto = Integer.parseInt(puertoStr);
-            for (NodoInfo nodo : nodos) {
-                if (nodo.puerto == puerto) {
-                    out.println(nodo.nombre);
-                    return;
-                }
-            }
-            out.println("DESCONOCIDO");
-        } catch (NumberFormatException e) {
-            out.println("DESCONOCIDO");
-        }
-    }
-
-    private void notificarNodos() {
-        notificados.clear();
-        for (int i = 0; i < nodos.size(); i++) {
-            NodoInfo nodo = nodos.get(i);
-            String siguiente = (i + 1 < nodos.size()) ? nodos.get(i + 1).nombre : nodos.get(0).nombre;
-            String clave = nodo.nombre + ":" + siguiente;
-            if (notificados.contains(clave)) continue;
-            notificados.add(clave);
-            int intentos = 5;
-            boolean notificado = false;
-            while (intentos > 0 && !notificado) {
-                try (Socket socket = new Socket(nodo.ip, nodo.puerto);
-                     PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-                     BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
-                    out.println("SIGUIENTE " + siguiente);
-                    in.readLine();
-                    notificado = true;
-                } catch (IOException e) {
-                    logArea.append("Intento fallido al notificar a " + nodo.nombre + ": " + e.getMessage() + "\n");
-                    intentos--;
-                    if (intentos > 0) {
-                        try { Thread.sleep(1000); } catch (InterruptedException ie) { Thread.currentThread().interrupt(); }
-                    }
-                }
-            }
-            if (!notificado) {
-                logArea.append("Error al notificar a " + nodo.nombre + ": No se pudo conectar\n");
-            }
-        }
-    }
-
-    private void indicarGenerarToken(NodoInfo nodo) {
-        int intentos = 5;
-        boolean notificado = false;
-        while (intentos > 0 && !notificado) {
-            try (Socket socket = new Socket(nodo.ip, nodo.puerto);
-                 PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-                 BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
-                out.println("GENERAR_TOKEN");
-                in.readLine();
-                notificado = true;
-            } catch (IOException e) {
-                logArea.append("Intento fallido al indicar generar token a " + nodo.nombre + ": " + e.getMessage() + "\n");
-                intentos--;
-                if (intentos > 0) { try { Thread.sleep(1000); } catch (InterruptedException ie) { Thread.currentThread().interrupt(); } }
-            }
-        }
-        if (!notificado) {
-            logArea.append("Error al indicar generar token a " + nodo.nombre + ": No se pudo conectar\n");
-        }
-    }
-
-    private void iniciarGUI() {
-        JFrame frame = new JFrame("Directorio");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400, 300);
-        logArea = new JTextArea();
-        logArea.setEditable(false);
-        frame.add(new JScrollPane(logArea));
-        frame.setVisible(true);
-        actualizarGUI();
+            int p = Integer.parseInt(puertoStr);
+            for (NodoInfo n : nodos) if (n.puerto == p) { out.println(n.nombre); return; }
+        } catch (NumberFormatException ignored) {}
+        out.println("DESCONOCIDO");
     }
 
     private void actualizarGUI() {
-        StringBuilder sb = new StringBuilder("Nodos conectados:\n");
-        for (NodoInfo nodo : nodos) {
-            sb.append(nodo.toString()).append("\n");
-        }
+        StringBuilder sb = new StringBuilder("Nodos en anillo:\n");
+        nodos.forEach(n -> sb.append(n.toString()).append("\n"));
         logArea.setText(sb.toString());
     }
 

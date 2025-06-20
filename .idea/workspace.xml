@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6bd88da-e6d2-4a81-9905-c4e47e9180f7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2doParcial2025/2doParcial2025.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="f6bd88da-e6d2-4a81-9905-c4e47e9180f7" name="Changes" comment="2do Parcial funcionando hasta punto 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2doParcial2024/src/Coordinador.java" beforeDir="false" afterPath="$PROJECT_DIR$/2doParcial2024/src/Coordinador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2doParcial2024/src/Directorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/2doParcial2024/src/Directorio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2doParcial2024/src/Recurso.java" beforeDir="false" afterPath="$PROJECT_DIR$/2doParcial2024/src/Recurso.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2doParcial2025/src/Directorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/2doParcial2025/src/Directorio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2doParcial2025/src/LogHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/2doParcial2025/src/LogHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2doParcial2025/src/Nodo.java" beforeDir="false" afterPath="$PROJECT_DIR$/2doParcial2025/src/Nodo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2doParcial2025/Directorio$NodoInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2doParcial2025/Directorio$NodoInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2doParcial2025/Directorio.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2doParcial2025/Directorio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2doParcial2025/LogHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2doParcial2025/LogHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2doParcial2025/Nodo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2doParcial2025/Nodo.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,11 +175,24 @@
       <option name="presentableId" value="Default" />
       <updated>1750212585832</updated>
       <workItem from="1750212587451" duration="8891000" />
-      <workItem from="1750364895116" duration="9390000" />
+      <workItem from="1750364895116" duration="13586000" />
     </task>
+    <task id="LOCAL-00001" summary="2do Parcial funcionando hasta punto 2">
+      <option name="closed" value="true" />
+      <created>1750374782053</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1750374782053</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2do Parcial funcionando hasta punto 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="2do Parcial funcionando hasta punto 2" />
   </component>
 </project>

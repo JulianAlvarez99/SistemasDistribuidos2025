@@ -28,9 +28,6 @@ public class LogHandler {
         return instance;
     }
 
-    /**
-     * Escribe una línea en el log de forma atómica usando FileChannel.
-     */
     public void log(String ip, int puerto, String mensaje) {
         String timestamp = sdf.format(new Date());
         String entry = String.format("%s %s:%d %s%n", timestamp, ip, puerto, mensaje);
