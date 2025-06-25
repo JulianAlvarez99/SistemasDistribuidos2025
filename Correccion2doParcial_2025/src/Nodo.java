@@ -130,7 +130,7 @@ public class Nodo {
 
     private void escuchar(ServerSocket ss) {
         logArea.append("Escuchando en " + ip + ":" + puerto + "\n");
-        while (true) {
+        while (conectado) {
             try (Socket s = ss.accept();
                  BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream()));
                  PrintWriter out = new PrintWriter(s.getOutputStream(), true)) {
@@ -139,6 +139,23 @@ public class Nodo {
                 logArea.append("Mensaje recibido: " + msg + "\n");
                 String[] parts = msg.split(" ");
                 switch (parts[0]) {
+                    case "DISCARD_TOKEN":
+                        if (tieneToken) {
+                            LogHandler.getInstance().log(this.ip, this.puerto, nombre + " TOKEN_DELETE");
+                            logArea.append("Token descartado\n");
+                            tieneToken = false;
+                            actualizarEstadoToken();
+                        }
+                        out.println("OK");
+                        break;
+                    case "SIGUIENTE":
+                        actualizarSiguiente(parts[1], parts[2], Integer.parseInt(parts[3]));
+                        out.println("OK");
+                        break;
+                    case "GENERAR_TOKEN":
+                        generarToken();
+                        out.println("OK");
+                        break;
                     case "TOKEN":
                         if (!tieneToken) {
                             new Thread(() -> {
@@ -149,24 +166,13 @@ public class Nodo {
                                 }
                             }).start();
                         }
-//                        else {
-//                            logArea.append("Token recibido pero ya poseído, ignorando\n");
-//                        }
-                        out.println("OK");
-                        break;
-                    case "SIGUIENTE":
-                        boolean generarToken = parts.length > 4 && parts[4].equals("*");
-                        actualizarSiguiente(parts[1], parts[2], Integer.parseInt(parts[3]));
-                        if (generarToken && !tieneToken) {
-                            generarToken();
-                        }
                         out.println("OK");
                         break;
                     default:
                         out.println("COMANDO_DESCONOCIDO");
                 }
-            } catch (IOException | InterruptedException e) {
-                logArea.append("Error listener: " + e.getMessage() + "\n");
+            } catch (IOException e) {
+                logArea.append("Error en listener: " + e.getMessage() + "\n");
             }
         }
     }
@@ -204,7 +210,7 @@ public class Nodo {
         actualizarEstadoToken();
 
         LogHandler.getInstance().log(ip, puerto, nombre);
-        Thread.sleep(5000 + random.nextInt(10000));  // retención aleatoria
+        Thread.sleep(1000 + random.nextInt(4000)); // Retención entre 1 y 5 segundos
 
         pasarYManejarFallo();
 
@@ -224,7 +230,6 @@ public class Nodo {
         } catch (IOException e) {
             logArea.append("Error al pasar token a " + siguienteNickname + ": " + e.getMessage() + "\n");
             notificarDesregistrar(siguienteNickname);
-            // Esperar reconfiguración antes de continuar
             try {
                 Thread.sleep(500);
             } catch (InterruptedException ignored) {}
@@ -243,13 +248,7 @@ public class Nodo {
         }
     }
 
-    private void actualizarSiguiente(String nickname, String ip, int puerto) throws IOException, InterruptedException {
-        if (tieneToken) {
-            LogHandler.getInstance().log(this.ip, this.puerto, nombre + " TOKEN_DELETE");
-            logArea.append("Token eliminado por reconfiguración\n");
-            tieneToken = false;
-            actualizarEstadoToken();
-        }
+    private void actualizarSiguiente(String nickname, String ip, int puerto) {
         siguienteNickname = nickname;
         siguienteIp = ip;
         siguientePuerto = puerto;
@@ -262,13 +261,14 @@ public class Nodo {
     }
 
     private synchronized void actualizarEstadoToken() {
-//        SwingUtilities.invokeLater(() -> {
+        SwingUtilities.invokeLater(() -> {
             frame.getContentPane().setBackground(tieneToken ? Color.GREEN : Color.LIGHT_GRAY);
             logArea.append(tieneToken ? "Posee el token\n" : "No posee el token\n");
-//        });
+        });
     }
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(Nodo::new);
-    }}
+    }
+}
 
