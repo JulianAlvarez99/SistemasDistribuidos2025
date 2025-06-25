@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6bd88da-e6d2-4a81-9905-c4e47e9180f7" name="Changes" comment="2do Parcial funcionando hasta punto 2">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2doParcial2025/src/Directorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/2doParcial2025/src/Directorio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2doParcial2025/src/LogHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/2doParcial2025/src/LogHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2doParcial2025/src/Nodo.form" beforeDir="false" afterPath="$PROJECT_DIR$/2doParcial2025/src/Nodo.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2doParcial2025/src/Nodo.java" beforeDir="false" afterPath="$PROJECT_DIR$/2doParcial2025/src/Nodo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2doParcial2025/Directorio$NodoInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2doParcial2025/Directorio$NodoInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2doParcial2025/Directorio.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2doParcial2025/Directorio.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2doParcial2025/LogHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2doParcial2025/LogHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/2doParcial2025/Nodo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2doParcial2025/Nodo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/token.log" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,8 +55,11 @@
     "Application.Coordinador (2).executor": "Run",
     "Application.Coordinador.executor": "Run",
     "Application.Directorio (1).executor": "Run",
-    "Application.Directorio.executor": "Run",
-    "Application.Nodo.executor": "Run",
+    "Application.Directorio (2).executor": "Run",
+    "Application.Directorio (3).executor": "Run",
+    "Application.Directorio.executor": "Debug",
+    "Application.Nodo (1).executor": "Run",
+    "Application.Nodo.executor": "Debug",
     "Application.ProcesoCliente (1).executor": "Run",
     "Application.ProcesoCliente.executor": "Run",
     "Application.ProcesoClienteRing.executor": "Run",
@@ -77,23 +78,9 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Nodo">
+  <component name="RunManager" selected="Application.Nodo (1)">
     <configuration name="Cliente" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Cliente" />
-      <module name="2doParcial2024" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Coordinador (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Coordinador" />
-      <module name="Global_State" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Coordinador (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Coordinador" />
       <module name="2doParcial2024" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -106,9 +93,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Directorio" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Directorio (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Directorio" />
-      <module name="2doParcial2024" />
+      <module name="Correccion2doParcial_2025" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Directorio (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Directorio" />
+      <module name="Correccion2doParcial_2025" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Nodo (1)" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Nodo" />
+      <module name="Correccion2doParcial_2025" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Nodo (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Nodo" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -150,11 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Directorio (2)" />
+        <item itemvalue="Application.Nodo (2)" />
+        <item itemvalue="Application.Directorio (3)" />
         <item itemvalue="Application.Nodo" />
         <item itemvalue="Application.Directorio (1)" />
-        <item itemvalue="Application.Directorio" />
-        <item itemvalue="Application.Coordinador (2)" />
-        <item itemvalue="Application.Coordinador (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -175,7 +182,11 @@
       <option name="presentableId" value="Default" />
       <updated>1750212585832</updated>
       <workItem from="1750212587451" duration="8891000" />
-      <workItem from="1750364895116" duration="13586000" />
+      <workItem from="1750364895116" duration="13907000" />
+      <workItem from="1750521145278" duration="249000" />
+      <workItem from="1750521587603" duration="13499000" />
+      <workItem from="1750653422034" duration="10449000" />
+      <workItem from="1750695294842" duration="10414000" />
     </task>
     <task id="LOCAL-00001" summary="2do Parcial funcionando hasta punto 2">
       <option name="closed" value="true" />
@@ -185,7 +196,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750374782053</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="2do Parcial funcionando hasta punto 2">
+      <option name="closed" value="true" />
+      <created>1750378963957</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1750378963957</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

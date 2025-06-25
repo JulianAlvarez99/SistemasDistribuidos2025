@@ -14,9 +14,9 @@ public class Nodo {
     private final Random random = new Random();
     private JFrame frame;
     private JPanel mainPanel;
-    private JLabel ipLabel;
+    private JLabel nextipLabel;
     private JPanel configPanel;
-    private JTextField ipField;
+    private JTextField nextipField;
     private JLabel portLabel;
     private JTextField portField;
     private JLabel nextportLabel;
@@ -25,6 +25,9 @@ public class Nodo {
     private JTextArea logArea;
     private JScrollPane scrollPane;
     private JButton btnConnect;
+    private JLabel ipLabel;
+    private JLabel nextnickLabel;
+    private JLabel nickLabel;
 
 
     public Nodo(String nombre) {
@@ -49,7 +52,7 @@ public class Nodo {
 
     private void conectar() {
         if (conectado) return;
-        ip = ipField.getText().trim();
+        ip = nextipField.getText().trim();
         puerto = Integer.parseInt(portField.getText().trim());
         try {
             ServerSocket ss = new ServerSocket(puerto);
@@ -59,7 +62,7 @@ public class Nodo {
             conectado = true;
             btnConnect.setEnabled(false);
             btnToken.setEnabled(true);
-            ipField.setEditable(false);
+            nextipField.setEditable(false);
             portField.setEditable(false);
             logArea.append("Conectado como " + ip + ":" + puerto + "\n");
         } catch (IOException e) {
