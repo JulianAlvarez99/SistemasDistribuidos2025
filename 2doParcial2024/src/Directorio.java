@@ -1,9 +1,12 @@
+import javax.swing.*;
 import java.io.*;
 import java.net.*;
 import java.util.*;
 
 public class Directorio {
     private Map<String, String> registro = new HashMap<>();
+    private JPanel mainPanel;
+    private JScrollPane scrollPanel;
 
     public Directorio(int puerto) throws IOException {
         ServerSocket serverSocket = new ServerSocket(puerto);

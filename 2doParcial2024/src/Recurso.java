@@ -10,7 +10,7 @@ public class Recurso {
 
     public Recurso(String nombre, int puerto) throws IOException {
         this.nombre = nombre;
-        log = new PrintWriter(new FileWriter(nombre + ".log", true));
+        log = new PrintWriter(new FileWriter("Recurso_" + nombre + ".log", true));
         ServerSocket serverSocket = new ServerSocket(puerto);
         registrar("localhost", 5000, "REGISTRAR " + nombre);
         registrar("localhost", 5001, "REGISTRAR " + nombre + " localhost " + puerto);
